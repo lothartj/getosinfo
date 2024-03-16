@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Website</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('/static/zh94bab3ju011.gif'); /* Relative path to the GIF file */
+        background-size: fit-content;
+    }
+    .author{
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        color: #149414;
+        background-color: rgb(0 0 0 / 65%);
+        padding: 5px;
+        border-radius: 12px;
+
+    }
+    .rgba-box {
+        width: 590px;
+        height: fit-content;
+        border-radius: 20px;
+        background-color:rgb(0 0 0 / 65%)  ; /* Red with 50% opacity rgba(255, 0, 0, 0.5)*/
+        padding: 20px; /* Add padding to give space inside the box */
+        box-sizing: border-box; /* Include padding and border in the total width and height of the box */
+    }
+    
+    h1 {
+        margin: 0; /* Remove default margin for <h1> elements */
+        color: white; /* Set text color to white */
+        font-size: 13px; /* Adjust font size as needed */
+        line-height: 1; /* Ensure line height fits tightly */
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+    h5{
+        font-family: "Press Start 2P", system-ui;
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        
+    }
+    
+</style>
+</head>
+<body>
+    <h5 class="author">Author: Lothar Tjipueja</h5>
+    <div class="rgba-box" data-tilt data-tilt-scale="1.1">
+        <h1 style="text-align: center;"><span style="color: #149414;">Welcome {{ username }}</span></h1>
+        <h1><span style="color: #149414;">System Platform:</span> {{system_platform}}</h1>
+        <h1><span style="color: #149414;">Network Name:</span>{{machine_network_name}}</h1>
+        <h1><span style="color: #149414;">IP address:</span>{{machine_ip_address}}</h1>
+        <h1><span style="color: #149414;">Operating System:</span> {{operating_system_name}} </h1> 
+        <h1> <span style="color: #149414;">CPU Cores:</span> {{num_cpu_cores}} </h1>
+        <h1><span style="color: #149414;">Total Memory (RAM):</span> {{total_memory}} </h1>
+        <h1> <span style="color: #149414;">Available Memory (RAM):</span>{{available_memory}} </h1>
+        <h1><span style="color: #149414;">Disk Space:</span>{{total_disk_space}} </h1>
+        <h1> <span style="color: #149414;">Available Disk Space:</span> {{available_disk_space}} </h1>
+        <h1><span style="color: #149414;">System Uptime:</span>{{system_uptime}} </h1>
+        <h1> <span style="color: #149414;">Battery Percentage: </span>{{battery_percentage}} </h1>
+        <h1> <span style="color: #149414;">Battery Power Status:</span>{{battery_power_status}} </h1>
+        <h1><span style="color: #149414;">Users Currently Logged In:</span> {{current_user}}</h1>
+        <h1> <span style="color: #149414;">System hostname:</span>{{system_hostname}}</h1>
+        {% comment %} <h1>MAC address of network interfaces: {{network_interfaces}}</h1> {% endcomment %}
+        <h1><span style="color: #149414;">Open Ports:</span> {{open_ports}} </h1>
+        <h1><span style="color: #149414;">DNS Resolver Configuration:</span>{{dns_resolver_config}} </h1>
+        <h1> <span style="color: #149414;">System Kernel Version:</span> {{kernel_version}} </h1>
+        <h1><span style="color: #149414;">System Architecture:</span> {{architecture}} </h1>
+        <h1> <span style="color: #149414;">Python Version:</span> {{python_version}}</h1>
+        <h1> <span style="color: #149414;">Logical CPUs:</span>{{logical_cpus}} </h1>
+        <h1> <span style="color: #149414;">Root directory:</span> {{system_root_directory}} </h1>
+        <h1> <span style="color: #149414;">Boot Time: </span>{{boot_time}} </h1>
+        <h1>  <span style="color: #149414;">Uptime:</span>{{uptime}} </h1>
+        <h1><span style="color: #149414;">Users Currently Logged In:</span> {{num_logged_in_users}} </h1>
+        <h1> <span style="color: #149414;">Running Processes:</span>{{num_running_processes}} </h1>
+        <h1><span style="color: #149414;">Screen Resolution:</span> {{screen_resolution}} </h1>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+</body>
+</html>
